@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Mocha Spec Runner</title>
+
+  <link rel="stylesheet" href="lib/mocha/mocha.css">
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="../client/bower_components/underscore.js"></script>
+  <script src="lib/chai/chai.js"></script>
+  <script src="lib/sinon/sinon.js"></script>
+  <script src="lib/sinon/sinon-chai.js"></script>
+  <script src="lib/mocha/mocha.js"></script>
+  <script src="lib/backbone.js"></script>
+
+  <script>
+  mocha.setup('bdd');
+  var expect = chai.expect;
+  $(function() {
+    window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+  });
+  </script>
+
+  <script src="../client/models/SongModel.js"></script>
+  <script src="../client/collections/Songs.js"></script>
+  <script src="../client/collections/SongQueue.js"></script>
+  <script src="../client/models/AppModel.js"></script>
+
+
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>
